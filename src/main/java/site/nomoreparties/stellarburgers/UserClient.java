@@ -30,7 +30,7 @@ public class UserClient extends RestAssuredClient {
     }
 
     @Step("Send POST request to api/auth/user/")
-    public ValidatableResponse change(UserCredentials credentials, String userToken) {
+    public ValidatableResponse change(ChangeUserCredentials credentials, String userToken) {
         return given()
                 .spec(getBaseSpec())
                 .header("Authorization", userToken)

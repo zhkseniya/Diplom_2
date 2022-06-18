@@ -23,7 +23,7 @@ public class LoginParameterizedTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getCourierLoginData() {
+    public static Object[][] getUserLoginData() {
         return new Object[][] {
                 {UserCredentials.getWithRandomEmail(user), 401, "email or password are incorrect"},
                 {UserCredentials.getWithRandomPassword(user), 401, "email or password are incorrect"},
