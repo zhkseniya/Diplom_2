@@ -6,7 +6,10 @@ import org.junit.Before;
 import org.junit.Test;
 import io.qameta.allure.junit4.DisplayName;
 import io.qameta.allure.Description;
-
+import site.nomoreparties.stellarburgers.client.UserClient;
+import site.nomoreparties.stellarburgers.model.User;
+import site.nomoreparties.stellarburgers.utils.ChangeUserCredentials;
+import site.nomoreparties.stellarburgers.utils.UserCredentials;
 import static org.junit.Assert.assertFalse;
 
 public class ChangeUserTest {
@@ -14,7 +17,6 @@ public class ChangeUserTest {
     private User user;
     private String userToken;
     private boolean userStatus;
-
 
     @Before
     public void setUp() {

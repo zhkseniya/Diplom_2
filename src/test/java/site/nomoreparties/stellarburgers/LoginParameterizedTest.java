@@ -6,6 +6,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import io.restassured.response.ValidatableResponse;
+import site.nomoreparties.stellarburgers.client.UserClient;
+import site.nomoreparties.stellarburgers.model.User;
+import site.nomoreparties.stellarburgers.utils.UserCredentials;
 import static org.hamcrest.Matchers.*;
 
 @RunWith(Parameterized.class)
@@ -22,7 +25,7 @@ public class LoginParameterizedTest {
         this.expectedErrorMessage = expectedErrorMessage;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0}. status: {1}. message: {2}")
     public static Object[][] getUserLoginData() {
         return new Object[][] {
                 {UserCredentials.getWithRandomEmail(user), 401, "email or password are incorrect"},

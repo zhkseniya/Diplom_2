@@ -1,14 +1,11 @@
-package site.nomoreparties.stellarburgers;
+package site.nomoreparties.stellarburgers.client;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-
-import java.util.ArrayList;
-
+import site.nomoreparties.stellarburgers.model.Order;
 import static io.restassured.RestAssured.given;
 
 public class OrdersClient extends RestAssuredClient {
-
     private static final String ORDERS_PATH = "api/orders";
 
     @Step("Send POST request to api/orders")

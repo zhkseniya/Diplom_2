@@ -1,4 +1,4 @@
-package site.nomoreparties.stellarburgers;
+package site.nomoreparties.stellarburgers.model;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

@@ -6,7 +6,9 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import site.nomoreparties.stellarburgers.client.UserClient;
+import site.nomoreparties.stellarburgers.model.User;
+import site.nomoreparties.stellarburgers.utils.UserCredentials;
 import static org.junit.Assert.assertTrue;
 
 public class LoginUserTest {

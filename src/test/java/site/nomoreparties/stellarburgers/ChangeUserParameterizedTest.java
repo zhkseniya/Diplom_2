@@ -7,6 +7,10 @@ import org.junit.After;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import io.restassured.response.ValidatableResponse;
+import site.nomoreparties.stellarburgers.client.UserClient;
+import site.nomoreparties.stellarburgers.model.User;
+import site.nomoreparties.stellarburgers.utils.ChangeUserCredentials;
+import site.nomoreparties.stellarburgers.utils.UserCredentials;
 
 @RunWith(Parameterized.class)
 public class ChangeUserParameterizedTest {
@@ -28,7 +32,7 @@ public class ChangeUserParameterizedTest {
         this.expectedChangeStatus = expectedChangeStatus;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0}. status: {1}. success: {2}")
     public static Object[][] getChangeUserLoginData() {
         return new Object[][] {
                 {ChangeUserCredentials.changeUserEmailOnly(user), 200, true},

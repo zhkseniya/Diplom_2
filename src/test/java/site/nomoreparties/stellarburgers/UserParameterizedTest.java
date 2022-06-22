@@ -6,8 +6,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import io.restassured.response.ValidatableResponse;
+import site.nomoreparties.stellarburgers.client.UserClient;
+import site.nomoreparties.stellarburgers.model.User;
 import static org.hamcrest.Matchers.*;
-
 
 @RunWith(Parameterized.class)
 public class UserParameterizedTest {
@@ -22,7 +23,7 @@ public class UserParameterizedTest {
         this.expectedErrorMessage = expectedErrorMessage;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0}. status: {1}. message: {2}")
     public static Object[][] getCourierData() {
         return new Object[][] {
                 {User.createUserWithoutEmail(), 403, "Email, password and name are required fields"},

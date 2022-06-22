@@ -6,7 +6,10 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import site.nomoreparties.stellarburgers.client.OrdersClient;
+import site.nomoreparties.stellarburgers.client.UserClient;
+import site.nomoreparties.stellarburgers.model.User;
+import site.nomoreparties.stellarburgers.utils.UserCredentials;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -33,8 +36,6 @@ public class GetUserOrdersTest {
             userClient.delete(userToken);
         }
     }
-
-
 
     @Test
     @DisplayName("Получение заказов без авторизации пользователя: api/orders/")

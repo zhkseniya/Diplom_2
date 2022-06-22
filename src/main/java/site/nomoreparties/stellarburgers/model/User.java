@@ -1,11 +1,9 @@
-package site.nomoreparties.stellarburgers;
+package site.nomoreparties.stellarburgers.model;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class User {
-
     public static final String EMAIL_POSTFIX = "@yandex.ru";
-
     public String email;
     public String password;
     public String name;
@@ -16,8 +14,7 @@ public class User {
         this.name = name;
     }
 
-    public User() {
-    }
+    public User() {}
 
     public String getEmail() {
         return email;

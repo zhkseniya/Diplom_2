@@ -1,12 +1,13 @@
-package site.nomoreparties.stellarburgers;
+package site.nomoreparties.stellarburgers.client;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-
+import site.nomoreparties.stellarburgers.utils.ChangeUserCredentials;
+import site.nomoreparties.stellarburgers.model.User;
+import site.nomoreparties.stellarburgers.utils.UserCredentials;
 import static io.restassured.RestAssured.given;
 
 public class UserClient extends RestAssuredClient {
-
     private static final String AUTH_PATH = "api/auth/";
 
     @Step("Send POST request to api/auth/register/")

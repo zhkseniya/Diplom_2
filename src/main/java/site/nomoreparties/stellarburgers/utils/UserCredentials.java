@@ -1,11 +1,10 @@
-package site.nomoreparties.stellarburgers;
+package site.nomoreparties.stellarburgers.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import site.nomoreparties.stellarburgers.model.User;
 
 public class UserCredentials {
-
     public static final String EMAIL_POSTFIX = "@yandex.ru";
-
     public String email;
     public String password;
 
@@ -14,8 +13,7 @@ public class UserCredentials {
         this.password = password;
     }
 
-    public UserCredentials() {
-    }
+    public UserCredentials() {}
 
     public static UserCredentials from(User user) {
         return new UserCredentials(user.email, user.password);

@@ -6,10 +6,14 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import site.nomoreparties.stellarburgers.client.IngredientsClient;
+import site.nomoreparties.stellarburgers.client.OrdersClient;
+import site.nomoreparties.stellarburgers.client.UserClient;
+import site.nomoreparties.stellarburgers.model.Order;
+import site.nomoreparties.stellarburgers.model.User;
+import site.nomoreparties.stellarburgers.utils.UserCredentials;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -41,7 +45,6 @@ public class CreateOrdersTest {
             userClient.delete(userToken);
         }
     }
-
 
     @Test
     @DisplayName("Создание заказа авторизованного пользователя: api/orders/")
